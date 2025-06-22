@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Ria Avtovukyp" %></title>
+    <title><%= content_for(:title) || t(".title") %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -13,6 +13,13 @@
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
@@ -23,8 +30,47 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <nav class="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-600">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-around sm:justify-between mx-auto py-3 sm:py-4">
+        <a href="#" class="flex items-center space-x-3">
+          <span class="self-center text-md sm:text-2xl font-semibold whitespace-nowrap text-white"><%= t(".navbar.brand") %></span>
+        </a>
+        <div class="flex gap-2 items-center space-x-3 text-white font-medium text-sm md:order-2 md:space-x-0">
+          <a href="tel:+380682681024" type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg p-2 sm:px-4 sm:py-2 text-center"><%= t(".navbar.phone_button") %></a>
+          <%= link_to('UA', root_path(locale: :uk), class: "p-2 rounded-lg hover:bg-blue-600 #{'bg-blue-600' if params[:locale] == 'uk'}") %>
+          <span>|</span>
+          <%= link_to('RU', root_path(locale: :ru), class: "p-2 rounded-lg hover:bg-blue-600 #{'bg-blue-600' if params[:locale] == 'ru'}") %>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-28 bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
       <%= yield %>
-    </main>
+    </section>
+
+    <footer class="w-full p-4 bg-gray-800 border-t border-gray-600 shadow-sm md:flex md:items-center md:justify-between md:p-6">
+      <span class="text-sm text-gray-400 sm:text-center"><%= t(".footer.copyright") %></span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-400 sm:mt-0">
+        <li class="flex items-center sm:gap-2 me-4">
+          <a href="https://t.me/RIA_AVTOVUKYP" class="inline-flex justify-center text-sky-500 bg-white hover:bg-gray-200 items-center py-1 px-1 sm:ms-4 text-2xl font-medium text-center rounded-xl">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://t.me/RIA_AVTOVUKYP" class="hover:underline">
+            <span class="hidden sm:inline">Telegram</span>
+          </a>
+        </li>
+        <li class="flex items-center sm:gap-2 sm:me-4 md:me-6">
+          <a href="https://www.instagram.com/ria_avtovukyp?igsh=MTZmMXhiOWllZjAzeg==" class="inline-flex justify-center text-white bg-gradient-to-tr from-[#fcb045] via-[#fd1d1d] to-[#833ab4] items-center py-1 px-1 sm:ms-4 text-2xl font-medium text-center rounded-xl">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.instagram.com/ria_avtovukyp?igsh=MTZmMXhiOWllZjAzeg==" class="hover:underline">
+            <span class="hidden sm:inline">Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
