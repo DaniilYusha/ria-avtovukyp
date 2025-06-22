@@ -1,2 +1,84 @@
 ru:
-  hello: "Привет, мир!"
+  layouts:
+    application:
+      title: "Ria Avtovukyp"
+      navbar:
+        brand: "RIA Автовыкуп"
+        phone_button: "+38 (068) 268 10 24"
+      footer:
+        copyright: "© 2025 RIA Автовыкуп. Все права защищены."
+  home:
+    index:
+      location: "Локация"
+      region: "Днепр и область"
+      title: "Выкуп авто за 1 час!"
+      subtitle: "Выезд на осмотр вашего авто абсолютно бесплатный"
+      call: "Позвонить"
+      how_works:
+        title: "Как это работает?"
+        subtitle: "Обычно процесс занимает до 2-х часов"
+        step_1_title: "Осматриваем авто"
+        step_1_description: "Быстро проверяем состояние машины"
+        step_2_title: "Озвучиваем цену"
+        step_2_description: "Даем честную рыночную оценку"
+        step_3_title: "Оформление сделки"
+        step_3_description: "Быстрый расчет и завершение сделки"
+      advantages:
+        title: "Преимущества выкупа"
+        subtitle: "Чем RIA Автовыкуп отличается от других способов продажи авто"
+        ria:
+          title: "RIA Автовыкуп"
+          description: >
+            Возьмём на себя <span class="font-semibold text-yellow-300">оценку</span>,
+            <span class="font-semibold text-yellow-300">осмотр</span> и
+            <span class="font-semibold text-yellow-300">оформление</span> авто.
+            Выбирая нас — вы
+            <span class="bg-yellow-400 text-blue-900 px-2 py-0.5 rounded-lg font-semibold">экономите</span>
+            своё время!
+          benefit_1_title: "От 1 до 2 часов"
+          benefit_1_subtitle: "Среднее время выкупа авто"
+          benefit_2_title: "Бесплатный выезд на оценку"
+          benefit_2_subtitle: "Приедем к вам"
+          benefit_3_title: "Работаем 24/7"
+          benefit_3_subtitle: "Купим ваше авто в любое время"
+          call_to_action: "Позвонить!"
+        manual:
+          title: "Самостоятельная продажа"
+          description: >
+            Это <span class="font-semibold text-red-300">затратно по времени</span>.
+            Шансы на выгодную сделку
+            <span class="bg-red-400 text-gray-900 px-2 py-0.5 rounded-lg font-semibold">снижаются</span>
+            из-за постоянных переговоров с покупателями.
+          negative_1_title: "Недели поисков покупателей"
+          negative_1_subtitle: "Никаких гарантий быстрой продажи"
+          negative_2_title: "Постоянные звонки и показы"
+          negative_2_subtitle: "Часто безрезультатные"
+          negative_3_title: "Расходы на рекламу"
+          negative_3_subtitle: "Траты на продвижение объявлений"
+          negative_4_title: "Неопределённость с ценой"
+          negative_4_subtitle: "Сложно самостоятельно оценить рыночную стоимость"
+      buyout:
+        title: "Какие авто мы выкупаем?"
+        subtitle: "Выкупаем авто в любом состоянии – быстро и выгодно!"
+        categories:
+          accident:
+            title: "После ДТП"
+            description: "Выкупим даже после серьёзных аварий"
+          no_documents:
+            title: "Без документов"
+            description: "Принимаем авто без регистрации и техпаспорта"
+          flooded:
+            title: "После затопления"
+            description: "Даже после воды ваше авто не теряет ценности"
+          fire:
+            title: "После пожара"
+            description: "Выкупим авто даже после возгорания"
+          uncustomed:
+            title: "Не растаможенные"
+            description: "Поможем продать без лишних хлопот"
+          not_running:
+            title: "Не на ходу"
+            description: "Купим авто, даже если оно не заводится"
+      recent_purchases:
+        title_desktop: "Последние купленные авто"
+        title_mobile: "Купленные авто"
