@@ -81,9 +81,10 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: ria_avtovukyp_production
-    username: ria_avtovukyp
-    password: <%= ENV["RIA_AVTOVUKYP_DATABASE_PASSWORD"] %>
+    database: <%= ENV["DATABASE_NAME"] %>
+    username: <%= ENV["DATABASE_USERNAME"] %>
+    password: <%= ENV["DATABASE_PASSWORD"] %>
+    host: <%= ENV["DATABASE_HOST"] %>
   cache:
     <<: *primary_production
     database: ria_avtovukyp_production_cache
