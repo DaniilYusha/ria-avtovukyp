@@ -1,12 +1,12 @@
 ru:
   layouts:
     application:
-      title: "Ria Avtovukyp"
+      title: "Avtovukyp"
       navbar:
-        brand: "RIA Автовыкуп"
+        brand: "Автовыкуп"
         phone_button: "+38 (068) 268 10 24"
       footer:
-        copyright: "© 2025 RIA Автовыкуп. Все права защищены."
+        copyright: "© 2025 Автовыкуп. Все права защищены."
   home:
     index:
       location: "Локация"
@@ -25,9 +25,9 @@ ru:
         step_3_description: "Быстрый расчет и завершение сделки"
       advantages:
         title: "Преимущества выкупа"
-        subtitle: "Чем RIA Автовыкуп отличается от других способов продажи авто"
+        subtitle: "Чем наш сервис отличается от других способов продажи авто"
         ria:
-          title: "RIA Автовыкуп"
+          title: "Автовыкуп"
           description: >
             Возьмём на себя <span class="font-semibold text-yellow-300">оценку</span>,
             <span class="font-semibold text-yellow-300">осмотр</span> и
