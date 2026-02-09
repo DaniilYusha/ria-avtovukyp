@@ -1,12 +1,12 @@
 uk:
   layouts:
     application:
-      title: "Ria Avtovukyp"
+      title: "Avtovukyp"
       navbar:
-        brand: "RIA Автовикуп"
+        brand: "Автовикуп"
         phone_button: "+38 (068) 268 10 24"
       footer:
-        copyright: "© 2025 RIA Автовикуп. Всі права захищені."
+        copyright: "© 2025 Автовикуп. Всі права захищені."
   home:
     index:
       location: "Локація"
@@ -25,9 +25,9 @@ uk:
         step_3_description: "Швидкий розрахунок та завершення угоди"
       advantages:
         title: "Переваги викупу"
-        subtitle: "Чим RIA Автовикуп відрізняється від інших способів продажу авто"
+        subtitle: "Чим наш сервіс відрізняється від інших способів продажу авто"
         ria:
-          title: "RIA Автовикуп"
+          title: "Автовикуп"
           description: >
             Візьмемо на себе <span class="font-semibold text-yellow-300">оцінку</span>, <span class="font-semibold text-yellow-300">огляд</span> та <span class="font-semibold text-yellow-300">оформлення</span> авто. Обираючи нас — ви <span class="bg-yellow-400 text-blue-900 px-2 py-0.5 rounded-lg font-semibold">економите</span> свій час!
           benefit_1_title: "Від 1 до 2 годин"
