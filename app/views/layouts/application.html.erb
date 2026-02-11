@@ -48,9 +48,9 @@
         </a>
         <div class="flex gap-2 items-center space-x-3 text-white font-medium text-sm md:order-2 md:space-x-0">
           <a href="tel:+380682681024" type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg p-2 sm:px-4 sm:py-2 text-center"><%= t(".navbar.phone_button") %></a>
-          <%= link_to('UA', root_path(locale: :uk), class: "p-2 rounded-lg hover:bg-blue-600 #{'bg-blue-600' if params[:locale] == 'uk'}") %>
+          <%= link_to('UA', localized_root_path(locale: :ua), class: "p-2 rounded-lg hover:bg-blue-600 #{'bg-blue-600' if params[:locale] == 'ua' || params[:locale].blank?}") %>
           <span>|</span>
-          <%= link_to('RU', root_path(locale: :ru), class: "p-2 rounded-lg hover:bg-blue-600 #{'bg-blue-600' if params[:locale] == 'ru'}") %>
+          <%= link_to('RU', localized_root_path(locale: :ru), class: "p-2 rounded-lg hover:bg-blue-600 #{'bg-blue-600' if params[:locale] == 'ru'}") %>
         </div>
       </div>
     </nav>

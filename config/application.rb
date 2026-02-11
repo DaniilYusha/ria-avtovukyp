@@ -24,7 +24,7 @@ module RiaAvtovukyp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    I18n.available_locales = [ :ru, :uk ]
-    I18n.default_locale = :ru
+    I18n.available_locales = [ :ru, :ua ]
+    I18n.default_locale = :ua
   end
 end
