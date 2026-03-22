@@ -7,6 +7,9 @@ on:
 
 jobs:
   scan_ruby:
+    concurrency:
+      group: ci-${{ github.ref }}-${{ github.workflow }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -22,6 +25,9 @@ jobs:
         run: bin/brakeman --no-pager
 
   scan_js:
+    concurrency:
+      group: ci-${{ github.ref }}-${{ github.workflow }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -38,6 +44,9 @@ jobs:
 
   lint:
     needs: [scan_ruby, scan_js]
+    concurrency:
+      group: ci-${{ github.ref }}-${{ github.workflow }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -56,4 +65,7 @@ jobs:
     needs: [lint]
     if: github.ref_name == 'main'
     uses: ./.github/workflows/deploy.yml
+    concurrency:
+      group: deploy-${{ github.ref }}-${{ github.workflow }}
+      cancel-in-progress: false
     secrets: inherit
